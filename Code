@@ -1,0 +1,27 @@
+
+
+int binary_iter(int *l,int n,int x){
+    int low = 0;
+    int high = n-1;
+    int m = (low+high)/2;
+    while(l[m] != x){
+        if(low == high){
+            if(l[m] == x){
+                return m;
+            }
+            else{
+                return -1;
+            }
+        }
+        if(x > m){
+            low = m+1;
+            m = (low+high)/2;
+        }
+        if(x < m){
+            high = m-1;
+            m = (low+high)/2;
+        }
+    }
+    return m;
+
+}
