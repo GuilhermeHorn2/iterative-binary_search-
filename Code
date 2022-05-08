@@ -5,6 +5,8 @@ int binary_iter(int *l,int n,int x){
     int high = n-1;
     int m = (low+high)/2;
     while(l[m] != x){
+
+        //sobrou so 1 elemento
         if(low == high){
             if(l[m] == x){
                 return m;
